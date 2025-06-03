@@ -60,12 +60,10 @@ public class LoginView extends JFrame {
 
                 boolean success = userController.login(username, password);
                 if (success) {
-                    JOptionPane.showMessageDialog(LoginView.this, "Login berhasil!");
-                    dispose();
-                    new BarangView().setVisible(true); // buka menu kelola barang
-                } else {
-                    JOptionPane.showMessageDialog(LoginView.this, "Username atau password salah!");
-                }
+    JOptionPane.showMessageDialog(LoginView.this, "Login berhasil!");
+    dispose();
+    new DashboardView().setVisible(true); 
+}
             }
         });
 
@@ -75,5 +73,7 @@ public class LoginView extends JFrame {
                 new RegisterView().setVisible(true);
             }
         });
+        
+        
     }
 }
